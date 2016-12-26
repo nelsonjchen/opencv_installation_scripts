@@ -6,7 +6,7 @@ brew install eigen tbb hdf5 tesseract \
 
 # step 2. install pyenv
 env PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install 3.6.0
-pyenv virtualenv main
+pyenv virtualenv 3.6.0 main
 pyenv global main
 
 # step 3. install numpy
