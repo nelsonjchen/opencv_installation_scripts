@@ -6,8 +6,7 @@ brew install eigen tbb hdf5 tesseract \
 
 # step 2. install pyenv
 env PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install 3.6.0
-pyenv virtualenv 3.6.0 main
-pyenv global main
+pyenv global 3.6.0
 
 # step 3. install numpy
 pip install -U pip setuptools wheel cython numpy
@@ -51,6 +50,11 @@ cmake \
     -D PYTHON3_PACKAGES_PATH=$(python -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())") ..
     make -j8
     make install
-    # Installing: /Users/adamgradzki/.pyenv/versions/main/lib/python3.6/site-packages/cv2.cpython-36m-darwin.so
+    # Installing: /Users/adamgradzki/.pyenv/versions/3.6.0/lib/python3.6/site-packages/cv2.cpython-36m-darwin.so
+    
+    pyenv virtualenv 3.6.0 main
+    pyenv global main
+    ln -s '/Users/adamgradzki/.pyenv/versions/3.6.0/lib/python3.6/site-packages/cv2.cpython-36m-darwin.so' \
+        '/Users/adamgradzki/.pyenv/versions/main/lib/python3.6/site-packages/cv2.cpython-36m-darwin.so'
 }
 run
