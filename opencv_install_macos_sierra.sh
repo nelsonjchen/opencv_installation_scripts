@@ -54,7 +54,7 @@ cmake \
     
     pyenv virtualenv 3.6.0 main
     pyenv global main
-    ln -s '/Users/adamgradzki/.pyenv/versions/3.6.0/lib/python3.6/site-packages/cv2.cpython-36m-darwin.so' \
-        '/Users/adamgradzki/.pyenv/versions/main/lib/python3.6/site-packages/cv2.cpython-36m-darwin.so'
+    ln -s "$HOME/.pyenv/versions/3.6.0/lib/python3.6/site-packages/cv2.cpython-36m-darwin.so" \
+        "$HOME/.pyenv/versions/main/lib/python3.6/site-packages/cv2.cpython-36m-darwin.so"
 }
 run
