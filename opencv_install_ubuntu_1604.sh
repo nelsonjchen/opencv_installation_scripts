@@ -58,8 +58,8 @@ cmake \
     cd /opt/src/opencv32_py36/release
     make install
     pyenv virtualenv 3.6.0 main
-    pip install -U numpy  # important to install in every new virtual environment where we symlink opencv
     pyenv global main
+    pip install -U pip setuptools wheel numpy  # important to install in every new virtual environment where we symlink opencv
     ln -s "$HOME/.pyenv/versions/3.6.0/lib/python3.6/site-packages/cv2.cpython-36m-x86_64-linux-gnu.so" \
         "$HOME/.pyenv/versions/main/lib/python3.6/site-packages/cv2.cpython-36m-x86_64-linux-gnu.so"
 }
