@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+set -o errexit
+
 function run () {
 # step 1. install brew (http://brew.sh)
 brew tap homebrew/science

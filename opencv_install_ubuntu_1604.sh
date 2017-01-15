@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+set -o errexit
+
 function run () {
 sudo apt install -y libjpeg8-dev libtiff5-dev libjasper-dev libpng12-dev libhdf5-dev \
     libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev \
