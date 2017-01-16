@@ -11,6 +11,18 @@ brew install eigen tbb hdf5 tesseract \
 env PYTHON_CONFIGURE_OPTS="--enable-shared" CFLAGS="-O2" pyenv install 3.6.0
 pyenv global 3.6.0
 
+if [[ `python --version` != "Python 3.6.0" ]]; then
+  echo "error: python installation failure"
+  echo "info: check if pyenv is installed correctly"
+  exit 1
+fi
+
+if [[ `which python` != "${HOME}/.pyenv/shims/python" ]]; then
+  echo "error: failed to detect pyenv python"
+  echo "info: check if pyenv is installed correctly"
+  exit 1
+fi
+
 # step 3. install numpy
 pip install -U pip setuptools wheel cython numpy
 
