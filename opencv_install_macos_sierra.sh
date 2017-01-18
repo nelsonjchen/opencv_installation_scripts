@@ -3,6 +3,12 @@ set -o errexit
 
 function run () {
 # step 1. install brew (http://brew.sh)
+if ! type "brew" > /dev/null; then
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+brew cleanup
+brew update
+brew upgrade
 brew tap homebrew/science
 brew install eigen tbb hdf5 tesseract \
     libjpeg-turbo libtiff libpng pyenv-virtualenv
