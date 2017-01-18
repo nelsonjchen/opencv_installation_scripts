@@ -7,7 +7,13 @@ brew tap homebrew/science
 brew install eigen tbb hdf5 tesseract \
     libjpeg-turbo libtiff libpng pyenv-virtualenv
 
-# step 2. install pyenv
+# step 2. set up pyenv
+if ! type "pyenv" > /dev/null; then
+  echo "error: pyenv not installed properly"
+  echo "info: install pyenv"
+  exit 1
+fi
+
 env PYTHON_CONFIGURE_OPTS="--enable-shared" CFLAGS="-O2" pyenv install 3.6.0
 pyenv global 3.6.0
 

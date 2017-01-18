@@ -16,6 +16,14 @@ echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
 source ~/.bashrc
 curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+
+# step 2. set up pyenv
+if ! type "pyenv" > /dev/null; then
+  echo "error: pyenv not installed properly"
+  echo "info: install pyenv"
+  exit 1
+fi
+
 pyenv update
 env PYTHON_CONFIGURE_OPTS="--enable-shared" CFLAGS="-O2" pyenv install 3.6.0
 pyenv global 3.6.0
