@@ -7,7 +7,7 @@ sudo apt install -y libjpeg8-dev libtiff5-dev libjasper-dev libpng12-dev libhdf5
     libx264-dev libgtk-3-dev libatlas-base-dev gfortran \
     build-essential cmake pkg-config libeigen3-dev libtbb-dev libtbb2 \
     make build-essential libssl-dev zlib1g-dev libbz2-dev \
-    libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils
+    libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils unzip
 
 
 # step 2. install pyenv
