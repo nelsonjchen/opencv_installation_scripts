@@ -11,7 +11,7 @@ sudo apt install -y libjpeg8-dev libtiff5-dev libjasper-dev libpng12-dev libhdf5
 
 
 # step 2. install pyenv
-echo 'export PATH="/home/linc/.pyenv/bin:$PATH"' >> ~/.bashrc
+echo 'export PATH="~/.pyenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
 source ~/.bashrc
