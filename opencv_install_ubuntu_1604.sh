@@ -67,8 +67,13 @@ cmake \
     -D BUILD_opencv_python3=ON \
     -D BUILD_TIFF=ON \
     -D BUILD_opencv_java=OFF \
-    -D WITH_CUDA=OFF \
-    -D ENABLE_AVX=ON \
+    -D WITH_CUDA=ON \  # comment this if you are not using CUDA
+    -D ENABLE_FAST_MATH=1 \  # comment this if you are not using CUDA
+    -D CUDA_FAST_MATH=1 \  # comment this if you are not using CUDA
+    -D WITH_CUBLAS=1 \  # comment this if you are not using CUDA
+    -D CUDA_GENERATION="" \  # comment this if you are not using CUDA
+    -D CUDA_ARCH_BIN=3.0 \  # comment this if you are not using CUDA
+    -D ENABLE_AVX=ON \  # comment this if you are not using 64 bit Intel
     -D WITH_OPENGL=ON \
     -D WITH_OPENCL=ON \
     -D WITH_IPP=OFF \
