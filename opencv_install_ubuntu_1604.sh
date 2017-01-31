@@ -25,7 +25,7 @@ if ! type "pyenv" > /dev/null; then
 fi
 
 pyenv update
-env PYTHON_CONFIGURE_OPTS="--enable-shared" CFLAGS="-O2" pyenv install 3.6.0
+PYTHON_CONFIGURE_OPTS="--enable-shared" CFLAGS="-O2" pyenv install 3.6.0
 pyenv global 3.6.0
 
 if [[ `python --version` != "Python 3.6.0" ]]; then
