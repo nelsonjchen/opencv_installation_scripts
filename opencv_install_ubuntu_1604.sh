@@ -60,6 +60,16 @@ mv -v opencv_contrib-3.2.0 /opt/src/opencv32_py36_contrib
 cd /opt/src/opencv32_py36
 mkdir /opt/src/opencv32_py36/release
 cd /opt/src/opencv32_py36/release
+
+
+#    -D WITH_CUDA=ON \  # comment this if you are not using CUDA
+#    -D ENABLE_FAST_MATH=1 \  # comment this if you are not using CUDA
+#    -D CUDA_FAST_MATH=1 \  # comment this if you are not using CUDA
+#    -D WITH_CUBLAS=1 \  # comment this if you are not using CUDA
+#    -D CUDA_GENERATION="" \  # comment this if you are not using CUDA
+#    -D CUDA_ARCH_BIN=3.0 \  # comment this if you are not using CUDA
+#    -D ENABLE_AVX=ON \  # comment this if you are not using 64 bit Intel
+
 cmake \
     -D CMAKE_INSTALL_PREFIX=/opt/opencv32_py36 \
     -D OPENCV_EXTRA_MODULES_PATH=/opt/src/opencv32_py36_contrib/modules \
@@ -67,13 +77,13 @@ cmake \
     -D BUILD_opencv_python3=ON \
     -D BUILD_TIFF=ON \
     -D BUILD_opencv_java=OFF \
-    -D WITH_CUDA=ON \  # comment this if you are not using CUDA
-    -D ENABLE_FAST_MATH=1 \  # comment this if you are not using CUDA
-    -D CUDA_FAST_MATH=1 \  # comment this if you are not using CUDA
-    -D WITH_CUBLAS=1 \  # comment this if you are not using CUDA
-    -D CUDA_GENERATION="" \  # comment this if you are not using CUDA
-    -D CUDA_ARCH_BIN=3.0 \  # comment this if you are not using CUDA
-    -D ENABLE_AVX=ON \  # comment this if you are not using 64 bit Intel
+    -D WITH_CUDA=ON \
+    -D ENABLE_FAST_MATH=1 \
+    -D CUDA_FAST_MATH=1 \
+    -D WITH_CUBLAS=1 \
+    -D CUDA_GENERATION="" \
+    -D CUDA_ARCH_BIN=3.0 \
+    -D ENABLE_AVX=ON \
     -D WITH_OPENGL=ON \
     -D WITH_OPENCL=ON \
     -D WITH_IPP=OFF \
