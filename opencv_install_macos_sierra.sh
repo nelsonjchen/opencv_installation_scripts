@@ -60,6 +60,7 @@ cmake \
     -D BUILD_TIFF=ON \
     -D BUILD_opencv_java=OFF \
     -D WITH_CUDA=OFF \
+    -D ENABLE_FAST_MATH=1 \
     -D ENABLE_AVX=ON \
     -D WITH_OPENGL=ON \
     -D WITH_OPENCL=ON \
