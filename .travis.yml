@@ -1,0 +1,6 @@
+os:
+  - linux
+  - osx
+script:
+  -  if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then ./opencv_install_macos_sierra.sh ; fi
+  -  if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./opencv_install_ubuntu_1604.sh ; fi
