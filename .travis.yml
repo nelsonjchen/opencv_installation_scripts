@@ -1,7 +1,15 @@
 sudo: required
+env:
+  - PYENV_VERSION=3.6.0
 os:
   - linux
   - osx
+before_install:
+  - |
+      if [[ -n "$PYENV_VERSION" ]]; then
+        wget https://github.com/praekeltfoundation/travis-pyenv/releases/download/0.2.0/setup-pyenv.sh
+        source setup-pyenv.sh
+      fi
 script:
   -  if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then ./opencv_install_macos_sierra.sh ; fi
   -  if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./opencv_install_ubuntu_1604.sh ; fi
